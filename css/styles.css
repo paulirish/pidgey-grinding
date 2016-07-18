@@ -1,0 +1,142 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(241, 242, 184, 0.67);
+    color: #662f17;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #ba6831;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+}
+
+#title {
+    position: relative;
+    padding-left: 27px;
+    font-family: "Fira Sans", sans-serif;
+}
+
+#logo {
+    width: 50px;
+    position: absolute;
+    top: -2px;
+    left: -25px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 rgba(241, 242, 184, 1);
+    color: #662f17;
+}
+
+#pokemon {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    background: url("select_arrows.png") no-repeat right 10px center white;
+    background-size: 10px;
+}
+
+/*input:focus,
+button:focus,
+select:focus,
+a:focus {
+    outline: none;
+}*/
+
+button {
+    background-color: #ba6831;
+    color: white;
+    border: none;
+    padding: 13px;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 #924321;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #924321;
+    box-shadow: 0 3px 0 0 #662f17;
+}
+
+button:active {
+    background-color: #ba6831;
+    box-shadow: 0 3px 0 0 #924321;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#error {
+    color: red;
+    text-align: center;
+}
+
+#output {
+    text-align: center;
+}
+
+#footer {
+    margin: 20px 0 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#description {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#description,
+#footer {
+    font-size: .90em;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input-element {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 47.5%;
+}
