@@ -5,12 +5,12 @@
   "display": "standalone",
   "icons": [
       {
-          "src": "\/icons\/android-chrome-192x192.png",
+          "src": "./icons/android-chrome-192x192.png",
           "sizes": "192x192",
-          "type": "image\/png"
+          "type": "image/png"
       }
   ],
   "theme_color": "#662f17",
   "background_color": "#662f17",
-  "start_url": "/"
+  "start_url": "./"
 }
