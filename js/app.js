@@ -1,4 +1,4 @@
-if (false && 'serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('../sw.js', { scope: '/' }).then((reg) => {
 		if (reg.installing) {
 			console.log('Service worker installing');

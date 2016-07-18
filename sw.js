@@ -1,13 +1,12 @@
 var CACHE_NAME = 'sw-ex';
-var CACHE_VERSION = 1;
+var CACHE_VERSION = 2;
 
 var filesToCache = [
   '/',
   '/index.html',
   '/css/styles.css',
   '/js/app.js',
-  '/images/yeoman.png',
-  '/images/touch/chrome-touch-icon-192x192.png'
+  '/icons/android-chrome-192x192.png'
 ];
 
 self.oninstall = function(event) {
