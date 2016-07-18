@@ -3,9 +3,14 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+}
+
 body {
     background-color: rgba(241, 242, 184, 0.67);
     color: #662f17;
+    scroll-behavior: smooth;
 }
 
 a,
@@ -25,7 +30,7 @@ a:active {
 }
 
 h1 {
-    margin-top: 0;
+    margin: 0 0 10px;
     text-align: center;
     font-family: "bangersregular", sans-serif;
     font-size: 60px;
@@ -80,24 +85,19 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: center;
 }
 
-#output {
-}
+#output {background: #f9f9f9;margin: 0 -20px;padding: 0 20px;border: 1px solid brown;border-width: 2px 0;}
 
 #footer {
     margin: 20px 0 0;
     padding: 20px;
     text-align: center;
+    font-size: 80%;
 }
 
 #description {
     text-align: center;
     margin-top: 0;
-    margin-bottom: 30px;
-}
-
-#description,
-#footer {
-    font-size: .90em;
+    margin-bottom: 20px;
 }
 
 .input-wrapper {

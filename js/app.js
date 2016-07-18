@@ -128,9 +128,9 @@ function calculate() {
         var html = "";
         html += "<p>Transfer <b>" + transferCount + "</b> " + POKEMON_NAME + "s first.";
         html += "<p>Activate your Lucky Egg, then…"
-        html += "<p>You can evolve <b>" + evolveCount + "</b> " + POKEMON_NAME + "s, gaining <b>" + xpToGain + "</b> XP";
-        html += "<p>At ~30sec/evolution, doing the " + evolveCount + " evolutions should take " + evolveTime + " minutes";
-        html += "<p>You will have <b>" + pidgeys + "</b> " + POKEMON_NAME + "s and <b>" + candies + "</b> candies left over</p><br>";
+        html += "<p>You can evolve <b>" + evolveCount + "</b> " + POKEMON_NAME + "s, gaining <b>" + xpToGain + "</b> XP.";
+        html += "<p>At ~30sec each, doing " + evolveCount + " evolutions takes " + evolveTime + " minutes.";
+        html += "<p>Afterwards, you will have <b>" + pidgeys + "</b> " + POKEMON_NAME + "s and <b>" + candies + "</b> candies left over.";
 
         html += "<p><b>Lucky Egg Recommendation: </b>";
 
@@ -142,4 +142,24 @@ function calculate() {
 
         $("#output").innerHTML = html;
     }
+}
+
+// just some bullshit to get the output visible while keyboarding.
+$$("input").forEach(function(e){
+	e.on("focus", function(){
+		// set up a one-off resize handler
+		window.addEventListener('resize', {
+			handleEvent: function(evt){
+				evt.currentTarget.removeEventListener(evt.type, this);
+				scrollInputs();
+			}
+		})
+	});
+});
+
+function scrollInputs(){
+	setTimeout(function(){
+		var topOfInputs = $('.input-wrapper').getBoundingClientRect().top;
+		window.scrollTo(0, window.scrollY + topOfInputs);
+	}, 20);
 }
