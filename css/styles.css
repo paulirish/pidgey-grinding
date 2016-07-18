@@ -27,20 +27,8 @@ a:active {
 h1 {
     margin-top: 0;
     text-align: center;
-    position: relative;
-}
-
-#title {
-    position: relative;
-    padding-left: 27px;
-    font-family: "Fira Sans", sans-serif;
-}
-
-#logo {
-    width: 50px;
-    position: absolute;
-    top: -2px;
-    left: -25px;
+    font-family: "bangersregular", sans-serif;
+    font-size: 60px;
 }
 
 label {
