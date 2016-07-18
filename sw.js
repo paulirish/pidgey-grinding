@@ -1,5 +1,5 @@
 var CACHE_NAME = 'sw-ex';
-var CACHE_VERSION = 2;
+var CACHE_VERSION = 3;
 
 var filesToCache = [
   './',
