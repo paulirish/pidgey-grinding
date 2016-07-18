@@ -2,11 +2,11 @@ var CACHE_NAME = 'sw-ex';
 var CACHE_VERSION = 2;
 
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/css/styles.css',
-  '/js/app.js',
-  '/icons/android-chrome-192x192.png'
+  './',
+  './index.html',
+  './css/styles.css',
+  './app.js',
+  './icons/android-chrome-192x192.png'
 ];
 
 self.oninstall = function(event) {
