@@ -129,10 +129,10 @@ function calculate() {
         html += "<p>Transfer <b>" + transferCount + "</b> " + POKEMON_NAME + "s first.";
         html += "<p>Activate your Lucky Egg, then…"
         html += "<p>You can evolve <b>" + evolveCount + "</b> " + POKEMON_NAME + "s, gaining <b>" + xpToGain + "</b> XP.";
-        html += "<p>At ~30sec each, doing " + evolveCount + " evolutions takes " + evolveTime + " minutes.";
+        html += "<p>Doing " + evolveCount + " evolutions (at ~30 sec each) takes " + evolveTime + " minutes.";
         html += "<p>Afterwards, you will have <b>" + pidgeys + "</b> " + POKEMON_NAME + "s and <b>" + candies + "</b> candies left over.";
 
-        html += "<p><b>Lucky Egg Recommendation: </b>";
+        html += "<p><strong>Lucky Egg Recommendation: </strong>";
 
         if (eggsToUse > 0) {
             html += "Use <b>" + eggsToUse + "</b> Lucky Eggs</p>";
@@ -159,7 +159,7 @@ $$("input").forEach(function(e){
 
 function scrollInputs(){
 	setTimeout(function(){
-		var topOfInputs = $('.input-wrapper').getBoundingClientRect().top;
+		var topOfInputs = $('.input-element').getBoundingClientRect().top;
 		window.scrollTo(0, window.scrollY + topOfInputs);
 	}, 20);
 }

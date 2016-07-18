@@ -27,28 +27,29 @@
     <h1>Pidgey Grinding</h1>
     <p id="description">Max out your Lucky Egg XP gain in Pokémon Go</p>
 
-    <label for="pokemon">Pokémon to evolve</label>
-    <select id="pokemon">
-        <optgroup label="12 Candies">
-            <option value="12">Pidgey</option>
-            <option value="12">Weedle</option>
-            <option value="12">Caterpie</option>
-        </optgroup>
-        <optgroup label="25 Candies">
-            <option value="25">Rattata</option>
-            <option value="25">Eevee</option>
-        </optgroup>
-    </select><br>
+    <div class="form">
+        <label for="pokemon">Pokémon to evolve</label>
+        <select id="pokemon">
+            <optgroup label="12 Candies">
+                <option value="12">Pidgey</option>
+                <option value="12">Weedle</option>
+                <option value="12">Caterpie</option>
+            </optgroup>
+            <optgroup label="25 Candies">
+                <option value="25">Rattata</option>
+                <option value="25">Eevee</option>
+            </optgroup>
+        </select><br>
+        <div class="input-wrapper">
+            <div class="input-element">
+                <label for="pidgey-amount"># of <span id="selected-pokemon">Pidgey</span>s</label>
+                <input type="number" class="integer" id="pidgey-amount" required min=0 max="999" value="20" placeholder=20>
+            </div>
 
-    <div class="input-wrapper">
-        <div class="input-element">
-            <label for="pidgey-amount"># of <span id="selected-pokemon">Pidgey</span>s</label>
-            <input type="number" class="integer" id="pidgey-amount" required min=0 max="999" value="20" placeholder=20>
-        </div>
-
-        <div class="input-element">
-            <label for="candy-amount"># of candies</label>
-            <input type="number" class="integer" id="candy-amount" required min=0 max="9999" value="105" placeholder=50>
+            <div class="input-element">
+                <label for="candy-amount"># of candies</label>
+                <input type="number" class="integer" id="candy-amount" required min=0 max="9999" value="105" placeholder=50>
+            </div>
         </div>
     </div>
 
