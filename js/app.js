@@ -52,14 +52,15 @@ $("#pokemon").on("change", function(e) {
     var elem = e.currentTarget;
     POKEMON_NAME = elem.options[elem.selectedIndex].text; 
     CANDIES_TO_EVOLVE = elem.options[elem.selectedIndex].value;
-    $("#selected-pokemon").html(POKEMON_NAME);
+    $("#selected-pokemon").innerHTML = POKEMON_NAME;
 });
 
 $$("input").forEach(function(e){
 	e.on("input", calculate);
 });
 $("select").on("change", calculate);
-$('button').on('click', calculate);
+//$('button').on('click', calculate);
+calculate();
     
 // Do this when submit is clicked
 function calculate() {
@@ -120,18 +121,21 @@ function calculate() {
         }
 
         var eggsToUse = Math.floor((evolveCount * TIME_TO_EVOLVE / 60) / 30);
+        var xpToGain = (evolveCount * 1000).toLocaleString();
+        var evolveTime = (evolveCount * TIME_TO_EVOLVE / 60);
 
         // Output
         var html = "";
-        html += "<p>You should transfer <b>" + transferCount + "</b> " + POKEMON_NAME + "s before activating your Lucky Egg</p>";
-        html += "<p>You will be able to evolve <b>" + evolveCount + "</b> " + POKEMON_NAME + "s, gaining <b>" + evolveCount * 1000 + "</b> XP</p>";
-        html += "<p>On average, it will take about <b>" + (evolveCount * TIME_TO_EVOLVE / 60) + "</b> minutes to evolve your " + POKEMON_NAME + "s</p>";
-        html += "<p>You will have <b>" + pidgeys + "</b> " + POKEMON_NAME + "s and <b>" + candies + "</b> Candies left over</p><br>";
+        html += "<p>Transfer <b>" + transferCount + "</b> " + POKEMON_NAME + "s first.";
+        html += "<p>Activate your Lucky Egg, then…"
+        html += "<p>You can evolve <b>" + evolveCount + "</b> " + POKEMON_NAME + "s, gaining <b>" + xpToGain + "</b> XP";
+        html += "<p>At ~30sec/evolution, doing the " + evolveCount + " evolutions should take " + evolveTime + " minutes";
+        html += "<p>You will have <b>" + pidgeys + "</b> " + POKEMON_NAME + "s and <b>" + candies + "</b> candies left over</p><br>";
 
-        html += "<p><b>Recommendation: </b>";
+        html += "<p><b>Lucky Egg Recommendation: </b>";
 
         if (eggsToUse > 0) {
-            html += "You should use <b>" + eggsToUse + "</b> Lucky Eggs</p>";
+            html += "Use <b>" + eggsToUse + "</b> Lucky Eggs</p>";
         } else {
             html += "Don't use any Lucky Eggs until you've found more " + POKEMON_NAME + "s!</p>";
         }

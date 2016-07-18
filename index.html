@@ -25,7 +25,7 @@
 
 <div class="container">
     <h1>Pidgey Grinding</h1>
-    <p id="description">A calculator for maximising your Lucky Egg XP gains in Pokémon Go</p>
+    <p id="description">Maximize your Lucky Egg XP gains in Pokémon Go</p>
 
     <label for="pokemon">Pokémon to evolve</label>
     <select id="pokemon">
@@ -42,19 +42,17 @@
 
     <div class="input-wrapper">
         <div class="input-element">
-            <label for="pidgey-amount">No. of <span id="selected-pokemon">Pidgey</span>s:</label>
-            <input type="number" class="integer" id="pidgey-amount" required min=0 max="999" placeholder=20>
+            <label for="pidgey-amount"># of <span id="selected-pokemon">Pidgey</span>s</label>
+            <input type="number" class="integer" id="pidgey-amount" required min=0 max="999" value="20" placeholder=20>
         </div>
 
         <div class="input-element">
-            <label for="candy-amount">No. of Candies:</label>
-            <input type="number" class="integer" id="candy-amount" required min=0 max="9999" placeholder=50>
+            <label for="candy-amount"># of Candies</label>
+            <input type="number" class="integer" id="candy-amount" required min=0 max="9999" value="105" placeholder=50>
         </div>
     </div>
 
     <p id="error"></p>
-
-    <button id="submit">Calculate</button><br>
 
     <div id="output"></div>
 

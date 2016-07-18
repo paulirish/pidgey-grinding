@@ -44,23 +44,8 @@ select {
     border-radius: 5px;
     box-shadow: 0 3px 0 0 rgba(241, 242, 184, 1);
     color: #662f17;
+    background-color: white;
 }
-
-#pokemon {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 10px;
-    background: url("select_arrows.png") no-repeat right 10px center white;
-    background-size: 10px;
-}
-
-/*input:focus,
-button:focus,
-select:focus,
-a:focus {
-    outline: none;
-}*/
 
 button {
     background-color: #ba6831;
@@ -96,7 +81,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #output {
-    text-align: center;
 }
 
 #footer {
