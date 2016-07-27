@@ -51,7 +51,7 @@ var POKEMON_NAME = "Pidgey";
 $("#pokemon").on("change", function(e) {
     var elem = e.currentTarget;
     POKEMON_NAME = elem.options[elem.selectedIndex].text; 
-    CANDIES_TO_EVOLVE = elem.options[elem.selectedIndex].value;
+    CANDIES_TO_EVOLVE = +elem.options[elem.selectedIndex].value;
     $("#selected-pokemon").innerHTML = POKEMON_NAME;
 });
 
